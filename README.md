@@ -53,6 +53,9 @@ CIRCUIT DIAGRAM
  ![image](https://user-images.githubusercontent.com/36288975/163544618-6eb8a7b5-7f1a-428a-8d9f-fd899b145efb.png)
 
 ### FIGURE 04 CIRCUIT DIAGRAM
+OFF SETUP:
+
+![image](https://github.com/Pallavi-Raveendranadreddy/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/blob/274a147e9b7b61cee57270679ea4c5488f48c1e3/s1.PNG)
 
 ### PROCEDURE:
 1.	Connect the circuit as per the circuit diagram 
