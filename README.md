@@ -57,6 +57,11 @@ OFF SETUP:
 
 ![image](https://github.com/Pallavi-Raveendranadreddy/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/blob/274a147e9b7b61cee57270679ea4c5488f48c1e3/s1.PNG)
 
+ON SETUP:
+
+![image](https://github.com/Pallavi-Raveendranadreddy/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/blob/de37dc00379a890255c7eda8d43659781af59b8c/s2.PNG)
+
+
 ### PROCEDURE:
 1.	Connect the circuit as per the circuit diagram 
 2.	Connect the board to your computer via the USB cable.
@@ -71,14 +76,86 @@ OFF SETUP:
 
 ### PROGRAM :
  
+SERIAL MONITOR:
+```
+// C++ code
+//
+#include <Servo.h>
+int pos = 0;
+
+Servo servo_11;
+
+void setup()
+{
+  servo_11.attach(11,500,2500);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  for (pos = 0;pos<=180;pos+=1)
+  {
+    servo_11.write(pos);
+    delay(5);
+    Serial.print("angle of servo= ");
+  Serial.println(pos);
+  }
+  for (pos = 180;pos>=0;pos-=1)
+  {
+    servo_11.write(pos);
+    delay(10);
+    Serial.print("angle of servo= ");
+  Serial.println(pos);
+  }
+  delay(100);
+  Serial.print("angle of servo= ");
+  Serial.println(pos);
+}
+```
+## OUTPUT:
+![image](https://github.com/Pallavi-Raveendranadreddy/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/blob/a10b3ff4967faef031af9eece02b2b73ad93ecc9/s3.PNG)
+
+TOGGLE GRAPH:
+
+```
+// C++ code
+#include <Servo.h>
+int pos = 0;
+
+Servo servo_11;
+
+void setup()
+{
+  servo_11.attach(11,500,2500);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  for (pos = 0;pos<=180;pos+=1)
+  {
+    servo_11.write(pos);
+    delay(5);
+    //Serial.print("angle of servo= ");
+  Serial.println(pos);
+  }
+  for (pos = 180;pos>=0;pos-=1)
+  {
+    servo_11.write(pos);
+    delay(10);
+    //Serial.print("angle of servo= ");
+  Serial.println(pos);
+  }
+  delay(100);
+  Serial.print("angle of servo= ");
+  Serial.println(pos);
+}
+```
+
+#OUTPUT:
+
+![image](https://github.com/Pallavi-Raveendranadreddy/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/blob/63e8f8d7b293f074552ec721e897569f2c7b82e3/s4.png)
 
 
-
-
-
-
-
-
-
-### RESULTS: 
+### RESULT: 
 Arduino uno interfacing with servo motor is learned and angular position is controlled using PWM signal.
